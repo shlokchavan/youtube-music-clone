@@ -1,0 +1,15 @@
+.mat-app-background {
+  height: 100%;
+}
+
+.content {
+  height: calc(100vh - 150px);
+  overflow: auto;
+}
+
+.bottom-player {
+  height: 80px;
+  background-color: #e0e0e0;
+  display: flex;
+  width: 100%;
+}

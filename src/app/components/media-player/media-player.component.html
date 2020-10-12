@@ -1,0 +1,70 @@
+<div class="container-fluid">
+
+  <div class="row player-bar">
+    <div class="col-md-3 left-controls">
+      <div [class]="button?.class" *ngFor="let button of musicControls">
+        <button mat-icon-button (click)="musicAction(button?.action)">
+          <ng-container *ngIf="button?.action == 'playPause'">
+            <mat-icon *ngIf="isPlaying">{{button?.icon}}</mat-icon>
+            <mat-icon *ngIf="!isPlaying">play_arrow</mat-icon>
+          </ng-container>
+          <mat-icon *ngIf="button?.action != 'playPause'">{{button?.icon}}</mat-icon>
+
+
+        </button>
+      </div>
+      <div class="time-ticker">
+        <span class="played">0:20</span>
+        <span>/</span>
+        <span class="remaining">3:00</span>
+      </div>
+    </div>
+    <div class="col-md-6 middle-controls">
+      <img
+        src="https://lh3.google.com/u/0/d/1Oy5yeBSUBlNa5rI90rMPdYJTW-ipkEIM=w1920-h673-iv1"
+        alt="Amrita">
+      <div class="content-info-wrapper">
+        <div class="title">Amrita</div>
+        <span class="byline-wrapper">
+          <div class="subtitle">
+            <a href="javascript:void(0);" class="channel-link">
+              Donald Walters
+            </a>
+            <span>
+              •
+            </span>
+            <a href="javascript:void(0);" class="music-link">
+              Relax meditations for flute and cello
+            </a>
+
+            <!-- <span>
+              •
+            </span>
+            2013 -->
+          </div>
+        </span>
+      </div>
+
+    </div>
+    <div class="col-md-3 right-controls">
+      <div class="volume-slider"></div>
+      <div class="actions">
+        <button class="volume_on" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+          <mat-icon>volume_up</mat-icon>
+        </button>
+        <!-- <button class="volume_mute" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+          <mat-icon>volume_off</mat-icon>
+        </button> -->
+        <button class="repeat" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+          <mat-icon>repeat</mat-icon>
+        </button>
+        <button class="shuffle" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+          <mat-icon>shuffle</mat-icon>
+        </button>
+        <button class="arrow_drop_down" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+          <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
