@@ -4,22 +4,21 @@
 
 .media-content {
   // padding: 10px;
-  width: calc(100vw - 40%);
-//   height: calc(100vh - 300px);
+  width: calc(100vw - 30%);
+  //   height: calc(100vh - 300px);
   // background-color: red;
   object-fit: contain;
   display: flex;
   justify-content: center;
 
   img {
-    max-width: 600px;
+    max-width: 450px;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 8px;
   }
-
 }
 
 .queue-list-container {
-    height: calc(100vh - 380px);
-    overflow: auto;
+  height: calc(100vh - 320px);
+  overflow: auto;
 }

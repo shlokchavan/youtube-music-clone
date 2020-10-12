@@ -1,7 +1,33 @@
-<div class="jumbotron" id="content">
+<!-- <div class="jumbotron" id="content">
   <h1>Explore</h1>
 
   <p>
     Dummy content would fall here
   </p>
+</div> -->
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-md-8 media-content">
+      <video controls autoplay class="video-player">
+        <source
+          src="https://firebasestorage.googleapis.com/v0/b/music-clone-1828e.appspot.com/o/videos%2FLife%20is%20a%20Dream%20-%20Ananda%20World%20Brotherhood%20Choir%20-%20music%20by%20Swami%20Kriyananda.mp4?alt=media&token=7f56c6d7-ea11-4c2b-85fe-f255f5522f4f"
+          type="video/mp4">
+      </video>
+    </div>
+    <div class="col-md-4 list-tabs">
+      <mat-tab-group dynamicHeight>
+        <ng-container *ngFor="let tab of tabs">
+          <mat-tab [label]="tab?.title | uppercase">
+            <div class="queue-list-container mat-elevation-z4">
+              <!-- Queue -->
+              <ng-container *ngFor="let item of songQueue | async">
+                <queue-item [item]="item"></queue-item>
+              </ng-container>
+            </div>
+          </mat-tab>
+        </ng-container>
+      </mat-tab-group>
+    </div>
+  </div>
 </div>

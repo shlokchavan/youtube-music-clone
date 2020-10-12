@@ -1,28 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'media-player',
   templateUrl: './media-player.component.html',
-  styleUrls: ['./media-player.component.scss'],
+  styleUrls: ['./media-player.component.scss']
 })
 export class MediaPlayerComponent implements OnInit {
   isPlaying: boolean;
   musicControls = [
     {
-      class: "previous-btn",
-      icon: "skip_previous",
-      action: "back"
+      class: 'previous-btn',
+      icon: 'skip_previous',
+      action: 'back'
     },
     {
-      class: "play-pause-btn",
-      icon: "pause",
-      action: "playPause"
+      class: 'play-pause-btn',
+      icon: 'pause',
+      action: 'playPause'
     },
     {
-      class: "next-btn",
-      icon: "skip_next",
-      action: "next"
-    },
+      class: 'next-btn',
+      icon: 'skip_next',
+      action: 'next'
+    }
   ];
 
   playPause() {
@@ -31,7 +31,7 @@ export class MediaPlayerComponent implements OnInit {
     console.log(this.isPlaying);
   }
 
-  musicAction(action) {
+  musicAction(e, action) {
     switch (action) {
       case 'playPause':
         this.playPause();
@@ -47,16 +47,10 @@ export class MediaPlayerComponent implements OnInit {
         break;
     }
   }
-  next() {
+  next() {}
+  back() {}
 
-  }
-  back() {
+  constructor() {}
 
-  }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

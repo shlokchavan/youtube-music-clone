@@ -3,14 +3,12 @@
   <div class="row player-bar">
     <div class="col-md-3 left-controls">
       <div [class]="button?.class" *ngFor="let button of musicControls">
-        <button mat-icon-button (click)="musicAction(button?.action)">
+        <button mat-icon-button (click)="musicAction($event, button?.action)">
           <ng-container *ngIf="button?.action == 'playPause'">
             <mat-icon *ngIf="isPlaying">{{button?.icon}}</mat-icon>
             <mat-icon *ngIf="!isPlaying">play_arrow</mat-icon>
           </ng-container>
           <mat-icon *ngIf="button?.action != 'playPause'">{{button?.icon}}</mat-icon>
-
-
         </button>
       </div>
       <div class="time-ticker">

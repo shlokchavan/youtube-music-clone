@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
       .login(credentials)
       .pipe(
         delay(1500),
-        tap(user => this.router.navigate(['/dashboard/home'])),
+        tap(user => this.router.navigate(['/player'])),
         finalize(() => (this.isLoading = false)),
         catchError(error => of((this.error = error)))
       )

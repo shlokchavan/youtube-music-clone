@@ -7,7 +7,7 @@ import { NoAuthGuard } from '@app/guard/no-auth.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/dashboard',
+    redirectTo: '/player',
     pathMatch: 'full'
   },
   {
@@ -15,15 +15,17 @@ const routes: Routes = [
     component: ContentLayoutComponent,
     canActivate: [NoAuthGuard], // Should be replaced with actual auth guard
     children: [
-      {
-        path: 'home',
-        loadChildren: () =>
-          import('@modules/home/home.module').then(m => m.HomeModule)
-      },
+      // {
+      //   path: 'home',
+      //   loadChildren: () =>
+      //     import('@modules/home/home.module').then(m => m.HomeModule)
+      // },
       {
         path: 'player',
         loadChildren: () =>
-          import('@modules/main-player/main-player.module').then(m => m.MainPlayerModule)
+          import('@modules/main-player/main-player.module').then(
+            m => m.MainPlayerModule
+          )
       },
       {
         path: 'explore',

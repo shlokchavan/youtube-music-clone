@@ -15,6 +15,9 @@ export class ContentLayoutComponent implements OnInit {
 
   constructor(private themeService: ThemeService) {}
 
+  mediaPlayerAction(e) {
+    console.log(e);
+  }
   ngOnInit(): void {
     if (this.overlayContainer) {
       this.overlayContainer.getContainerElement().classList.add(this.theme);

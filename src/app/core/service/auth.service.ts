@@ -10,7 +10,7 @@ interface LoginContextInterface {
 }
 
 const defaultUser = {
-  username: 'Mathis',
+  username: 'Joy',
   password: '12345',
   token: '12345'
 };
@@ -26,7 +26,7 @@ export class AuthService {
       loginContext.username === defaultUser.username &&
       loginContext.password === defaultUser.password
     ) {
-        return of(defaultUser);
+      return of(defaultUser);
     }
 
     return throwError('Invalid username or password');

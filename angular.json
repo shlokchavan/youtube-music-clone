@@ -20,7 +20,7 @@
           "options": {
             "allowedCommonJsDependencies": [
               "rxjs-compat"
-             ],
+            ],
             "aot": true,
             "outputPath": "dist",
             "index": "src/index.html",
@@ -28,6 +28,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
+              "src/_redirects",
               {
                 "glob": "favicon.ico",
                 "input": "src",
@@ -40,7 +41,9 @@
               }
             ],
             "styles": [
-              { "input": "src/styles.scss" }
+              {
+                "input": "src/styles.scss"
+              }
             ],
             "scripts": []
           },
@@ -198,6 +201,7 @@
   },
   "defaultProject": "angular-folder-structure",
   "cli": {
-    "defaultCollection": "@ngrx/schematics"
+    "defaultCollection": "@ngrx/schematics",
+    "analytics": "ed9376f6-ee7c-47f1-93d6-286f4c4d7776"
   }
 }

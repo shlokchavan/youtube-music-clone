@@ -1,3 +1,34 @@
 .nav-button {
-    margin-right: 20px;
+  margin-right: 20px;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0.6;
+  color: white;
+
+  .logo {
+    cursor: pointer;
+    .logo-title {
+      color: white;
+      font-size: 32px;
+      font-family: 'Berkentia';
+    }
+  }
+}
+
+.user-profile {
+  cursor: pointer;
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
 }

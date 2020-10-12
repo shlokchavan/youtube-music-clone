@@ -1,15 +1,36 @@
 <div class="wrapper">
   <div class="toolbar">
     <mat-toolbar color="primary">
-      <div class="container">
-
-        <span class="d-none d-md-inline">
-          <button mat-button class="nav-button" *ngFor="let item of navItems" [routerLink]="[item.link]"
-            routerLinkActive="active">
-            {{ item.title }}
+      <div class="container-fluid navbar-container d-flex">
+        <div class="navbar">
+          <div class="logo" [routerLink]="['/player']">
+            <img width="60px" src="https://anandaindia.org/wp-content/plugins/ananda-x/img/icons/joy-logo.svg"
+              alt="logo">
+            <span class="logo-title">Ananda</span>
+          </div>
+          <span class="d-none d-md-inline">
+            <button mat-button class="nav-button" *ngFor="let item of navItems" [routerLink]="[item.link]"
+              routerLinkActive="active">
+              {{ item.title }}
+            </button>
+          </span>
+        </div>
+        <div title="Shlok Chavan" class="user-profile">
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <img
+              src="https://yt3.ggpht.com/a-/AOh14GicytV1jhMVKSne7ycBSSCpRO-m8kASPDPek9jcHfw=s108-c-k-c0x00ffffff-no-rj"
+              alt="user-profile">
           </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item disabled>
+              <span>View Profile</span>
+            </button>
+            <button mat-menu-item (click)="logout()">
+              <span>Logout</span>
+            </button>
+          </mat-menu>
+        </div>
 
-        </span>
       </div>
     </mat-toolbar>
   </div>
