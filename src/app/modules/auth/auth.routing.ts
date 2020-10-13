@@ -7,7 +7,7 @@ import { RegisterComponent } from './page/register/register.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/auth/login',
+    redirectTo: '/player',
     pathMatch: 'full'
   },
   {

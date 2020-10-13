@@ -18,7 +18,12 @@
   }
 }
 
-.queue-list-container {
+.queue-list-container,
+.lyrics-container {
   height: calc(100vh - 320px);
   overflow: auto;
+}
+
+.lyrics-container {
+  padding: 20px;
 }

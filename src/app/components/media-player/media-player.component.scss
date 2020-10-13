@@ -1,22 +1,29 @@
+.time-slider {
+  position: absolute;
+  bottom: 110px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: auto !important;
+}
+
 .player-bar {
-  width: 100vw;
+  width: calc(100vw - 20px);
   padding: 10px 0;
   display: flex;
-
-  //   playing status
-//   border-top: 2px solid red;
-  
+  justify-content: center;
+  align-items: center;
 }
 
 .left-controls {
   display: flex;
-  width: 30%;
+  width: 25%;
   padding: 10px;
 
   .time-ticker {
-    padding: 8px;
-    font-size: 16px;
-    font-weight: 600;
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 400;
 
     .played {
       padding-right: 2px;
@@ -27,7 +34,6 @@
     }
   }
 }
-
 
 .middle-controls {
   display: flex;

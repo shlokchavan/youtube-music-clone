@@ -1,17 +1,19 @@
-<div class="content-card px-2">
-  <div class="media">
-    <img [src]="item?.thumbnail" class="thumbnail" [alt]="item?.title">
-    <div class="content-info-wrapper">
-      <h5 class="music-title">
-        {{item?.title}}
-      </h5>
-      <span class="subtitle text-muted">
-        {{item?.author}}
-      </span>
+<a (click)="itemClicked()">
+  <div class="content-card px-2">
+    <div class="media">
+      <img [src]="item?.thumbnail" class="thumbnail" [alt]="item?.title">
+      <div class="content-info-wrapper">
+        <h5 class="music-title">
+          {{item?.title}}
+        </h5>
+        <span class="subtitle text-muted">
+          {{item?.author}}
+        </span>
+      </div>
     </div>
-  </div>
-  <div class="duration">
-    <span>3:44</span>
-  </div>
+    <div class="duration">
+      <span>{{item?.duration}}</span>
+    </div>
 
-</div>
+  </div>
+</a>

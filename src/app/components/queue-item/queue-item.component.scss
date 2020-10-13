@@ -1,9 +1,10 @@
 .content-card {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
   border-bottom: 2px solid #e0e0e0;
+  background-color: white;
 }
-
 .media {
   display: flex;
   justify-content: initial;

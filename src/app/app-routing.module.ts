@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: '',
     component: ContentLayoutComponent,
-    canActivate: [NoAuthGuard], // Should be replaced with actual auth guard
+    // canActivate: [NoAuthGuard], // Should be replaced with actual auth guard
     children: [
       // {
       //   path: 'home',
@@ -39,14 +39,17 @@ const routes: Routes = [
       }
     ]
   },
-  {
-    path: 'auth',
-    component: AuthLayoutComponent,
-    loadChildren: () =>
-      import('@modules/auth/auth.module').then(m => m.AuthModule)
-  },
+  // {
+  //   path: 'auth',
+  //   component: AuthLayoutComponent,
+  //   loadChildren: () =>
+  //     import('@modules/auth/auth.module').then(m => m.AuthModule)
+  // },
   // Fallback when no prior routes is matched
-  { path: '**', redirectTo: '/auth/login', pathMatch: 'full' }
+  { path: '**', 
+  // redirectTo: '/player', 
+  redirectTo: '/player', 
+  pathMatch: 'full' }
 ];
 
 @NgModule({
